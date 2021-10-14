@@ -81,7 +81,6 @@ const chHuman = document.querySelector("#humanCheck");
 chHuman.addEventListener("click", (event) => {
   if (event.target.checked === true) {
     //se produce un evento que cambia al hacer checked
-
     //y compara la igualdad de dos objetos sin forzar la conversión automática.
     listCharacters.innerHTML = "";
     let species = "Human";
@@ -106,7 +105,7 @@ const chUnknown = document.querySelector("#unknownCheck");
 chUnknown.addEventListener("click", (event) => {
   if (event.target.checked === true) {
     listCharacters.innerHTML = "";
-    let species = "Unknown";
+    let species = "unknown";
     let onlyUnknown = dataOrder.specieResults(printCharacter, species);
     characterList(onlyUnknown);
   } else {
@@ -139,13 +138,52 @@ const chUnknownState = document.querySelector("#unknownCheckState");
 chUnknownState.addEventListener("click", (event) => {
   if (event.target.checked === true) {
     listCharacters.innerHTML = "";
-    let state = "Unknown";
+    let state = "unknown";
     let onlyUnknownState = dataOrder.stateResults(printCharacter, state);
     characterList(onlyUnknownState);
   } else {
     characterList(printCharacter);
   }
 });
+//----------BOTON EPISODES--------//
+
+const btnEpisodes= document.getElementById('episodesbtn');
+const wrapEpisodes= document.getElementById('wrapEpisodes');
+const characterBtn= document.getElementById('characterBtn');
+const main = document.getElementById('mainCharacters');
+btnEpisodes.addEventListener("click", function(){
+  main.hidden = true;
+  wrapEpisodes.hidden = false;
+  btnEpisodes.hidden = false;
+  characterBtn.hidden = false;
+},
+)
+characterBtn.addEventListener('click', function() {
+  main.hidden = false;
+  wrapEpisodes.hidden = true;
+  btnEpisodes.hidden = false;
+  characterBtn.hidden = true;
+})
+
+btnEpisodes.addEventListener("click", function(){
+  let url = 'https://rickandmortyapi.com/api/episode'
+  fetch(url)
+  .then(response => response.json())
+  .then(data =>  data.results)
+  .then(result => result.map(episode => {
+    const listEpisodes = document.getElementById('episodes');
+    listEpisodes.innerHTML += `
+    <div class="episodesContainer">
+      <ol>
+        <li>Name: ${episode.name}</li>
+        <li>Created: ${episode.created}</li>
+        <li>Url: ${episode.url}</li>
+      </ol>
+    </div>
+    `
+   
+  })); 
+})
 
 //-------------ADD HBO-------------//
 const buttonAdd = document.getElementById("addHBO");
