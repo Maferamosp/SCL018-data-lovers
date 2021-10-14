@@ -81,7 +81,6 @@ const chHuman = document.querySelector("#humanCheck");
 chHuman.addEventListener("click", (event) => {
   if (event.target.checked === true) {
     //se produce un evento que cambia al hacer checked
-
     //y compara la igualdad de dos objetos sin forzar la conversión automática.
     listCharacters.innerHTML = "";
     let species = "Human";
@@ -150,11 +149,22 @@ chUnknownState.addEventListener("click", (event) => {
 
 const btnEpisodes= document.getElementById('episodesbtn');
 const wrapEpisodes= document.getElementById('wrapEpisodes');
+const characterBtn= document.getElementById('characterBtn');
 const main = document.getElementById('mainCharacters');
 btnEpisodes.addEventListener("click", function(){
   main.hidden = true;
   wrapEpisodes.hidden = false;
+  btnEpisodes.hidden = false;
+  characterBtn.hidden = false;
+},
+)
+characterBtn.addEventListener('click', function() {
+  main.hidden = false;
+  wrapEpisodes.hidden = true;
+  btnEpisodes.hidden = false;
+  characterBtn.hidden = true;
 })
+
 btnEpisodes.addEventListener("click", function(){
   let url = 'https://rickandmortyapi.com/api/episode'
   fetch(url)
@@ -174,7 +184,6 @@ btnEpisodes.addEventListener("click", function(){
    
   })); 
 })
-
 
 //-------------ADD HBO-------------//
 const buttonAdd = document.getElementById("addHBO");

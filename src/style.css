@@ -66,13 +66,27 @@ body {
   font-size: 22px;
   border: none;
 }
+.characterBtn{
+  background-color: #7ba381;
+  font-family: "Lilita One", cursive;
+  float: right;
+  color: aliceblue;
+  margin-top: -85px;
+  margin-right: 20%;
+  width: 17%;
+  height: 50px;
+  border-radius: 23px;
+  text-align: center;
+  font-size: 22px;
+  border: none;
+}
 .searchbtn {
   background-color: #7ba381;
   color: aliceblue;
   font-family: "Lilita One", cursive;
   float: right;
   margin-top: -85px;
-  margin-right: 1%;
+  margin-right: 25px;
   width: 17%;
   height: 50px;
   border-radius: 23px;
@@ -90,11 +104,11 @@ body {
   background-color: #7ba381;
   position: fixed;
   transform: rotate(270deg);
-  width: 500px;
+  width: 480px;
   height: 70px;
-  top: 375px;
+  top: 340px;
   text-align: center;
-  left: -200px;
+  left: -180px;
   border-radius: 25px;
 }
 
@@ -118,14 +132,13 @@ input[type="checkbox"] {
   width: 200px;
   margin-top: 50px;
   height: 20%;
-  /*margin-left: 300px;*/
 }
 
 .orderAlphabetically {
   font-family: "Lilita One", cursive;
   box-sizing: border-box;
-  top: 130px;
-  right: 25px;
+  top: 115px;
+  right: 20px;
   width: 230px;
   height: 50px;
   font-size: 30px;
@@ -156,8 +169,8 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  top: 190px;
-  right: 25px;
+  top: 170px;
+  right: 20px;
   width: 230px;
   height: 160px;
   background-color: #7ba381;
@@ -174,8 +187,8 @@ input {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  top: 360px;
-  right: 25px;
+  top: 335px;
+  right: 20px;
   width: 230px;
   height: 160px;
   background-color: #7ba381;
@@ -189,18 +202,17 @@ input {
 /*--------ADD-----*/
 .addHBO {
   background-image: url(images/add.jpg);
-  height: 160px;
+  height: 120px;
   width: 250px;
   background-repeat: no-repeat;
   background-size: 250px 160px;
   position: fixed;
   border-radius: 20px;
-  top: 530px;
+  top: 500px;
   bottom: 10px;
   right: 14px;
   border: none;
   cursor: pointer;
-  top: 550px;
 }
 
 /*-------Lista personajes-------*/
@@ -293,7 +305,7 @@ input {
   text-align: right;
 }
 .characterCard {
-  width: 75%;
+  width: 73%;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
