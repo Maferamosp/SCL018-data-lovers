@@ -8,7 +8,11 @@ Empezamos a desarrollar nuestro prototipo de alta fidelidad, basándonos en nues
 
 ![figma](https://github.com/Maferamosp/SCL018-data-lovers/blob/mafe/readme%20DL/figma.png)
 
-Hicimos nuestros diseños responsive, entendiendo que la mayoria de nuestros usuarios se conectan a traves de su equipos móviles.
+### Historias de usuarios
+
+![hu](https://github.com/Maferamosp/SCL018-data-lovers/blob/main/readme%20DL/FILTRAR%20LOS%20PERSONAJES%20ENTRE%20LOS%20HUMONAOS%20Y%20LOS%20ALIEN..png)
+
+Hicimos nuestros diseños responsive, entendiendo que la mayoria de nuestros usuarios se conectan a través de su equipos móviles.
 
 IPHONE
 
