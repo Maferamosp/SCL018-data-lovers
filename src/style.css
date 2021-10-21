@@ -309,11 +309,9 @@ input {
   height: 100%;
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-wrap: wrap; /*se emplea para que puedan dividirse si no caben*/
+  flex-direction: row; /*se ordenan horizontalmente*/
   color: #091332;
-  -webkit-text-stroke-width: 0.1px;
-  -webkit-text-stroke-color: white;
   margin-left: 98px;
 }
 .photo {
@@ -355,7 +353,7 @@ input {
   display: flex;
   flex-direction: row;
 }
-
+/* ---------Episodios------*/
 .episodes {
   font-family: "Lilita One", cursive;
   font-size: 24px;
@@ -363,8 +361,9 @@ input {
 .episodesContainer {
   background: #ffffffa9;
   display: flex;
-  justify-items: center;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   border-radius: 8px;
   border-color: #091332;
   margin-top: 10px;

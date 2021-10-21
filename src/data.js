@@ -1,6 +1,6 @@
 const dataOrder = {
   searchCharacter: function (printCharacter, searchValue) {
-    let searchName = printCharacter.filter((e) => e.name.includes(searchValue));
+    let searchName = printCharacter.filter((e) => e.name.toLowerCase().includes(searchValue.toLowerCase()));
     return searchName;
   },
   //ordenar de la A a la Z
